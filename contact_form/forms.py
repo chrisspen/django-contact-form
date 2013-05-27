@@ -27,7 +27,10 @@ class BaseEmailFormMixin(object):
         """
         if not self.is_valid():
             raise ValueError("Cannot generate Context when form is invalid.")
-        return dict(request=self.request, **self.cleaned_data)
+        return dict(
+            request=self.request,
+            subject=settings.CONTACT_FORM_SUBECT,
+            **self.cleaned_data)
 
     def get_email_headers(self):
         """
