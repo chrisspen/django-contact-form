@@ -4,11 +4,11 @@ TEST_REQUIREMENTS = (
     'mock',
 )
 
-from contact_form import VERSION
+from contact_form import __version__
 
 setup(
     name="django-contact-form-fc",
-    version=VERSION,
+    version=__version__,
     author="Ilya Baryshev",
     description="Django Contact Form using class based views.",
     long_description=open('README.rst', 'r').read(),
